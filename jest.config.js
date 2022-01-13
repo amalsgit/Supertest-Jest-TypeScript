@@ -8,10 +8,9 @@ module.exports = {
         expand: true,
         filename: 'report.html',
         publicPath: './html-report',
-        openReport: true,
       },
     ],
   ],
   roots: ['<rootDir>/src'],
   testEnvironment: 'node',
-}
+};
