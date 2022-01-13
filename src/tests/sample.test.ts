@@ -17,11 +17,16 @@ describe('Post life cycle', () => {
     // Create a new post
     const createPostResp = await postActions.createPost(title, body, userId)
     expect(createPostResp.status).toBe(201)
-    expect(createPostResp.data).toMatchObject({ title, body, id: 101 })
+    expect(createPostResp.data).toMatchObject({ title, body, userId, id: 101 })
+    expect(createPostResp.data.title).toBe(title)
+    expect(createPostResp.data.body).toBe(body)
+    expect(createPostResp.data.userId).toBe(userId)
+
     postId = createPostResp.data.id
 
     // Retrieve the created post
     const getPostResp = await postActions.getPost(postId)
+
     // Since this is a dummy endpoint, this will not actually return the real data created in the above call.
     // Thus the api will return 404
     expect(getPostResp.status).toBe(404)

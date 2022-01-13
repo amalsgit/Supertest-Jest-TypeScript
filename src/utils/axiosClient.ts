@@ -19,6 +19,7 @@ axiosClient.interceptors.response.use(
   },
 )
 
+// Main Axios client method to make api calls
 const sendHttpRequest = async (
   method: Method,
   url: string,
