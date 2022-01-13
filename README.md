@@ -1,7 +1,8 @@
 # API-Test-Jest-TypeScript
 
 A sample repo showcasing functional api test automation with Axios, Jest and TypeScript.
-The tests are run against few dummy API's exposed at https://jsonplaceholder.typicode.com/
+
+The tests are run against few dummy API's exposed at https://jsonplaceholder.typicode.com/. Because of this not all data assertions are done for the tests.
 
 ## Prerequisites
 
@@ -36,3 +37,4 @@ House rules for writing tests:
 - The `actions` folder consists of individual api calls that are composed together to create a user scenario in tests. Always define individual api calls here
 - The `utils/config.ts` file is the place to manage application environments and urls
 - The `axiosClient.ts` file consist of the main axios client used to make api calls and an interceptor to log the details on the Html report
+- Make sure that each test is independent and the test data created for each test is deleted as part of a cleanup stage

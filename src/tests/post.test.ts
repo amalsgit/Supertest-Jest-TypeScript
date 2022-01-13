@@ -4,7 +4,7 @@ describe('Post life cycle', () => {
   let postId: string
 
   afterEach(async () => {
-    // Deleting the created post as part of data cleanup
+    // Deleting the created post as part of data cleanup. Always cleanup all data created during a test
     const deletePostResp = await postActions.deletePost(postId)
     expect(deletePostResp.status).toBe(200)
   })
