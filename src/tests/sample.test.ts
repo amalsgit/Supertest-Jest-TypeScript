@@ -22,8 +22,8 @@ describe('Post life cycle', () => {
 
     // Retrieve the created post
     const getPostResp = await postActions.getPost(postId)
-    // Since this is a dummy endpoint this will not actually return the real data created in the above call.
-    // Thus the api will return 404 and the assertion will fail.
-    expect(getPostResp.status).toBe(200)
+    // Since this is a dummy endpoint, this will not actually return the real data created in the above call.
+    // Thus the api will return 404
+    expect(getPostResp.status).toBe(404)
   })
 })
